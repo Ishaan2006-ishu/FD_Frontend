@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Chessboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    const body=document.querySelector("body");
+    const box=document.createElement("div");
+    const btn=document.createElement("button");
+    btn.textContent="click me";
+    body.appendChild(box);
+    body.appendChild(btn);
+
+    // box.style.height="200px";
+    // box.style.width="200px";
+    // box.style.backgroundColor="red";
+
+    box.classList.add("small"); //for adding css class
+    // box.classList.remove("small"); //for removing css class
+
+    //event building
+    let flag=0;
+    btn.addEventListener("click",()=>{
+      if(flag===0){
+        box.classList.add("big");
+      
+        box.classList.remove("small");
+        flag=1;
+
+      }
+      else{
+        
+      
+        box.classList.add("small");
+        box.classList.remove("big");
+        flag=0;
+      }
+      
+    });
+  </script>
+  <style>
+    .small{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+
+    }
+    .big{
+      width: 500px;
+      height: 500px;
+      background-color: red;
+
+    }
+    
+  </style>
+
+  <!-- <div class="chessboard">
+    <!-- 64 squares -->
+    <!-- <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+    <div class="square1"></div>
+
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div>
+    <div class="square2"></div> -->
+    
+    <!-- repeat the above 8x8 = 64 times -->
+     </div> -->
+     <!-- <script src="script.js"></script> -->
+  
+</body>
+</html>

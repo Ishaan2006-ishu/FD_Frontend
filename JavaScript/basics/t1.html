@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="t1.css">
+  </head>
+  <body>
+    <div id="profile-card">
+      <img id="profile-img" src="default.png" alt="Profile Photo" />
+      <h2 id="name">Your Name</h2>
+      <h3 id="role">Your Role</h3>
+      <p id="bio">Short description about you.</p>
+
+      <div id="skill-input ">
+        <ol class="skill visi">
+
+        </ol>
+      </div>
+
+      <div id="details" class="hidden">
+        <p>More details go here...</p>
+      </div>
+    </div>
+
+    <div id="control-panel">
+      <input id="name-input" placeholder="Enter name" />
+      <input id="role-input" placeholder="Enter role" />
+      <textarea id="bio-input" placeholder="Enter bio"></textarea><br /><br />
+
+      <input id="skill-input" placeholder="Enter skill" />
+      <button id="add-skill">Add Skill</button>
+
+
+      <button id="remove-skill-btn">Remove Last Skill</button><br /><br />
+      <button id="submit">Submit</button><br /><br />
+      
+
+      <div id="theme-options">
+        <button class="theme-btnb" data-color="blue">Blue</button>
+        <button class="theme-btng" data-color="green">Green</button>
+      </div>
+
+      <button id="toggle-details-btn">Toggle Details</button>
+    </div>
+    <script src="t1.js"></script>
+  </body>
+</html>

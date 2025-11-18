@@ -1,0 +1,9 @@
+each object linked to protype
+
+Prototypal inheritence:-
+
+The prototype contains method that are accessible to all object linked to protype .
+this is different from normal inheritence as child class was inheriting from parent class and this is like an 
+instace inheriting from a class.
+
+Ex-constructur function , Es6 classes etc.

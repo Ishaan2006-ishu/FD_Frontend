@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cities List</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #333;
+    }
+
+    ol {
+      
+      list-style: none;
+      padding-left: 0;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    li {
+    
+      background: #fff;
+      margin: 12px 0;
+      padding: 12px 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: relative;
+      font-size: 18px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    
+    li::before {
+      content: counter(city-counter) ". ";
+      font-weight: bold;
+      color: #ff5733;
+      margin-right: 8px;
+    }
+
+    
+    li:nth-child(odd):hover {
+      transform: scale(1.05) rotate(-2deg);
+      background: #f9f871;
+    }
+
+    li:nth-child(even):hover {
+      transform: scale(1.05) rotate(2deg);
+      background: #a0e7e5;
+    }
+
+    li:nth-child(3n):hover {
+      background: #b4f8c8;
+    }
+  </style>
+</head>
+<body>
+  <h2>Top Cities</h2>
+  <ol>
+    <li>Mumbai</li>
+    <li>Delhi</li>
+    <li>Kolkatta</li>
+    <li>Ahemdabad</li>
+    <li>Pune</li>
+    <li>Banglore</li>
+    
+  </ol>
+</body>
+</html>

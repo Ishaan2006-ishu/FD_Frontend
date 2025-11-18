@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    margin: 5px;
+    padding: 5px;
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+
+.sh_task{
+    text-align: center;
+}
+.include{
+    list-style-position: inside; 
+    overflow: auto;
+}
+.include li{
+    word-wrap: break-word;
+    white-space: normal; 
+    word-break: break-all;
+}
+
+.visi{
+    visibility: hidden;
+
+}
