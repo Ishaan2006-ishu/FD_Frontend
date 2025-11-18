@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border: 1px solid #555;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    height: 14px;
+}
+
+
+.valid {
+    border: 1px solid green;
+}
+
+.invalid {
+    border: 1px solid red;
+}
