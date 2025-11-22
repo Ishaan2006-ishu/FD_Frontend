@@ -16,7 +16,7 @@ btna.addEventListener("click", () => {
     li.innerText = taskValue;
 
     ul.appendChild(li);
-    ul.classList.remove("visi");
+    // ul.classList.remove("visi");
 
     text.value = "";
 });
@@ -28,7 +28,7 @@ btnr.addEventListener("click", () => {
     }
 
 
-    if (!ul.lastElementChild) {
-        ul.classList.add("visi");
-    }
+    // if (!ul.lastElementChild) {
+    //     ul.classList.add("visi");
+    // }
 });

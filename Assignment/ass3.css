@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.carousel {
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: 250px;
+    border: 1px solid gray;
+}
+
+.btns {
+    margin-top: 10px;
+}
+
+button {
+    padding: 6px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+}

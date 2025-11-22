@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 300px;
+}
+
+.buttons {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 6px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 6px;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+}
+.search_area{
+    margin: 3px;
+}
