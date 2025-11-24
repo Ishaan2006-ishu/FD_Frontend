@@ -6,5 +6,5 @@ let maxLength = 100;
 textBox.addEventListener("input", ()=> {
     let remaining = maxLength - textBox.value.length;
 
-    count.textContent = "Characters left: " + remaining;
+    count.innerText = "Characters left: " + remaining;
 });
