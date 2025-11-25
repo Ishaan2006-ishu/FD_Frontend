@@ -1,9 +1,8 @@
-// 1. Promise that resolves after 2 seconds
+
 function getPosts() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      let success = false;  // change to false to test rejection
-
+      let success = false;  
       if (success) {
         resolve(["Post One", "Post Two", "Post Three"]);
       } else {
@@ -14,17 +13,17 @@ function getPosts() {
   });
 }
 
-// 2. Async function to load posts
+
 async function loadPosts() {
   const status = document.getElementById("status");
   const list   = document.getElementById("postList");
 
-  list.innerHTML = "";                          // clear previous
-  status.innerText = "Loading posts…";          // show loading message
+  list.innerHTML = "";                          
+  status.innerText = "Loading posts…";         
 
   try {
-    let posts = await getPosts();               // wait for promise
-    status.innerText = "";                      // remove loading message
+    let posts = await getPosts();               
+    status.innerText = "";                      
 
     posts.forEach(p => {
       let li = document.createElement("li");
@@ -35,7 +34,7 @@ async function loadPosts() {
   } catch (error) {
     status.innerText = error + " (Retrying in 2 seconds...)";
 
-    // Bonus: Retry mechanism
+    
     setTimeout(loadPosts, 2000);
   }
 }

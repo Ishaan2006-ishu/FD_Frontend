@@ -1,0 +1,180 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator Using Event Listeners</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #eef2f3;
+            font-family: Arial;
+        }
+
+        .calculator {
+            width: 260px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        #display {
+            width: 100%;
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            padding-right: 10px;
+            margin-bottom: 15px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .clear {
+            background: red;
+            color: white;
+        }
+
+        .backspace {
+            background: orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+
+        <div class="buttons">
+
+           
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn operator">/</button>
+
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn operator">*</button>
+
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn operator">-</button>
+
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button id="equals">=</button>
+            <button class="btn operator">+</button>
+
+            
+            <button class="clear" id="clearBtn">C</button>
+
+           
+            <button class="backspace" id="backBtn">⌫</button>
+
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById("display");
+        const buttons = document.querySelectorAll(".btn");
+        const clearBtn = document.getElementById("clearBtn");
+        const backBtn = document.getElementById("backBtn");
+        const equalsBtn = document.getElementById("equals");
+
+        
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                console.log(button);
+                
+                display.value += button.textContent;
+            });
+        });
+
+    
+        equalsBtn.addEventListener("click", () => {
+            try {
+                display.value = eval(display.value);
+            } catch {
+                display.value = "Error";
+            }
+        });
+
+        
+        clearBtn.addEventListener("click", () => {
+            display.value = "";
+        });
+
+        
+        backBtn.addEventListener("click", () => {
+            display.value = display.value.slice(0, -1);
+        });
+    </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Only Calculator</title>
+  <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background: #eef2f3;
+          font-family: Arial;
+      }
+      #calculator {
+          width: 260px;
+          background: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      }
+      input {
+          width: 100%;
+          height: 50px;
+          font-size: 24px;
+          text-align: right;
+          margin-bottom: 15px;
+      }
+      .buttons {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+      }
+      button {
+          height: 50px;
+          font-size: 20px;
+          cursor: pointer;
+      }
+      .clear { background: red; color: white; }
+      .backspace { background: orange; color: white; }
+  </style>
+</head>
+<body>
+
+    <!-- Empty container -->
+    <div id="app"></div>
+
+    <script src="ass14.js.js"></script>
+</body>
+</html>

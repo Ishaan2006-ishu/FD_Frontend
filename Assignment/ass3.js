@@ -10,29 +10,34 @@ let imgBox = document.getElementById("imgBox");
 let index = 0;
 
 
-
 document.getElementById("nextBtn").addEventListener("click", () => {
-
     index++;
-    console.log(index);
-    
     if (index >= images.length) index = 0;
     imgBox.src = images[index];
 });
 
 
-
 document.getElementById("prevBtn").addEventListener("click", () => {
     index--;
-    console.log(index);
     if (index < 0) index = images.length - 1;
     imgBox.src = images[index];
 });
 
 
+let autoSlide = setInterval(() => {
+    index++;
+    if (index >= images.length) index = 0;
+    imgBox.src = images[index];
+}, 3000);
 
-// setInterval(() => {
-//     index++;
-//     if (index >= images.length) index = 0;
-//     imgBox.src = images[index];
-// }, 3000);
+imgBox.addEventListener("mouseover", () => {
+    clearInterval(autoSlide);
+});
+
+imgBox.addEventListener("mouseout", () => {
+    autoSlide = setInterval(() => {
+        index++;
+        if (index >= images.length) index = 0;
+        imgBox.src = images[index];
+    }, 3000);
+});

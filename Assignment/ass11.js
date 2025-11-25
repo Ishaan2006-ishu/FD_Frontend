@@ -1,4 +1,4 @@
-// Create promises
+
 function step1() {
   return new Promise(resolve => {
     setTimeout(() => resolve("Step 1 done"), 1000);

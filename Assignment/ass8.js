@@ -1,31 +1,42 @@
-async function getWeather() {
-  const city = document.getElementById("cityInput").value.trim();
-  const apiKey = "YOUR_API_KEY"; 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+let input = document.getElementById("city");
+let btn = document.getElementById("btn");
+let result = document.getElementById("result");
+let errorMsg = document.getElementById("error");
 
-  // Clear previous messages
-  document.getElementById("error").innerText = "";
-  document.getElementById("temp").innerText = "";
-  document.getElementById("humidity").innerText = "";
-  document.getElementById("condition").innerText = "";
+let apiKey = "YOUR_API_KEY";
 
-  try {
-    let response = await fetch(url);
+btn.addEventListener("click", async () => {
+    let cityName = input.value.trim();
 
-    if (!response.ok) {
-      throw new Error("City not found");
+    if (cityName === "") {
+        errorMsg.innerText = "Please enter a city name!";
+        result.innerText = "";
+        return;
     }
 
-    let data = await response.json();
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
-    document.getElementById("temp").innerText = `Temperature: ${data.main.temp}°C`;
-    document.getElementById("humidity").innerText = `Humidity: ${data.main.humidity}%`;
-    document.getElementById("condition").innerText = `Condition: ${data.weather[0].description}`;
+    try {
+        let response = await fetch(url);
 
-  } catch (error) {
-    document.getElementById("error").innerText = "Invalid city name. Please try again!";
-    console.error(error);
-  }
-}
+        // BONUS: Handle invalid city
+        if (!response.ok) {
+            throw new Error("City not found!");
+        }
 
-document.getElementById("getWeatherBtn").addEventListener("click", getWeather);
+        let data = await response.json();
+
+        let temp = data.main.temp;
+        let humidity = data.main.humidity;
+        let condition = data.weather[0].description;
+
+        result.innerText =
+            `Temperature: ${temp}°C\nHumidity: ${humidity}%\nCondition: ${condition}`;
+
+        errorMsg.innerText = "";
+    }
+    catch (err) {
+        errorMsg.innerText = "Error: " + err.message;
+        result.innerText = "";
+    }
+});

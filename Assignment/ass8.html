@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    <h2>Weather App</h2>
 
-    <input type="text" id="cityInput" placeholder="Enter city name">
-    <button id="getWeatherBtn">Get Weather</button>
+    <div class="box">
+        <h2>Weather Info</h2>
 
-    <p id="temp"></p>
-    <p id="humidity"></p>
-    <p id="condition"></p>
-    <p id="error"></p>
+        <input type="text" id="city" placeholder="Enter city name">
+        <button id="btn">Get Weather</button>
 
-<script src="ass8.js"></script>
+        <p id="result"></p>
+        <p id="error"></p>
+    </div>
 
+    <script src="weather.js"></script>
 </body>
 </html>

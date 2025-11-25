@@ -38,4 +38,4 @@ async function loadData() {
 
 document.getElementById("refreshBtn").addEventListener("click", loadData);
 
-loadData(); // load when page opens
+loadData(); 
